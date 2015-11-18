@@ -9,30 +9,31 @@ $(document).on("click", "#contact-us-button", function(e) {
   console.log(text);
   console.log(name);
 
+  if(from=='' || text=='' || name=="")
+    return false;
+
   // For more options in mandrill data check:
   // https://mandrillapp.com/api/docs/messages.JSON.html
   $.ajax({
     type: "POST",
     url: "https://mandrillapp.com/api/1.0/messages/send.json",
     data: {
-      'key': '4amdG4T3xH955gWIqF1RFw',
-      'message': {
-        'from_email': from,
-        'from_name': name,
-        'to': [
+      "key": "4amdG4T3xH955gWIqF1RFw",
+      "message": {
+        "text": text,
+        "subject": "New submission from www.asimisoft.com",
+        "from_email": from,
+        "from_name": name,
+        "to": [
           {
-            'email': 'amazingrails@gmail',
-            'name': 'Asimi soft Pvt. Ltd.',
-            'type': 'to'
+            "email": "amazingrails@gmail.com",
+            "name": "Asimi Soft Pvt. Ltd.",
+            "type": "to"
           }
-        ],
-        'subject': 'New submission from www.asimisoft.com',
-        'text': text,
-        'important': true,
-        "metadata": {
-          "website": "www.asimisoft.com"
-        }
-      }
+        ]
+      },
+      "async": false,
+      "ip_pool": "Main Pool"
     },
     success: function(data){
       alert("Thank you for contacting us. We will get back to you soon.");
