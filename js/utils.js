@@ -20,6 +20,7 @@ $(document).on("click", "#contact-us-button", function(e) {
     data: {
       "key": "4amdG4T3xH955gWIqF1RFw",
       "message": {
+        "html": "<p style='color: red'>Customer is contacting us, need to get back to them ASAP.</p>"
         "text": text,
         "subject": "New submission from www.asimisoft.com",
         "from_email": from,
