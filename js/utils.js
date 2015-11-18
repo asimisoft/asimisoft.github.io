@@ -15,7 +15,7 @@ $(document).on("click", "#contact-us-button", function(e) {
     type: "POST",
     url: "https://mandrillapp.com/api/1.0/messages/send.json",
     data: {
-      'key': 'PfYcvhvR9EbZXzqYVPHiRw',
+      'key': '4amdG4T3xH955gWIqF1RFw',
       'message': {
         'from_email': from,
         'from_name': name,
