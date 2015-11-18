@@ -27,7 +27,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- require js -->
-    <script src="js/jquery-1.8.3.min.js"></script>
+    <!-- <script src="js/jquery-1.8.3.min.js"></script> -->
+    <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/responsee.js"></script>
@@ -382,12 +383,18 @@
                 </div>
                 <div class="s-12 m-12 l-5">
                   <h3>Contact Us</h3>
-                  <form class="customform" action="//formspree.io/amazingrails@gmail.com" method="POST">
-                    <div class="s-12"><input name="name" placeholder="Your name" title="Your name" type="text" /></div>
-                    <div class="s-12"><input name="_replyto" placeholder="Your e-mail" title="Your e-mail" type="email" /></div>
-                    <div class="s-12"><textarea placeholder="Your message" name="" rows="5"></textarea></div>
+                  <form class="customform" action="#" method="POST">
+                    <div class="s-12">
+                      <input id="email-name" placeholder="Your name" title="Your name" type="text" />
+                    </div>
+                    <div class="s-12">
+                      <input id="email-from" placeholder="Your e-mail" title="Your e-mail" type="email" />
+                    </div>
+                    <div class="s-12">
+                      <textarea id="email-content" placeholder="Your message" rows="5"></textarea>
+                    </div>
                     <div class="s-12 m-12 l-4">
-                      <button class="color-btn" id="contact-us-button" type="submit">Send</button>
+                      <input type="submit" class='color-btn' id="contact-us-button">
                     </div>
                   </form>
                 </div>
@@ -414,6 +421,7 @@
     </footer>
 
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/utils.js"></script>
     <script type="text/javascript">
        jQuery(document).ready(function($) {
           var theme_slider = $("#owl-demo");
@@ -443,11 +451,6 @@
               theme_slider.trigger('owl.prev');
           })
       });
-
-       jQuery(document).on("click", "#contact-us-button", function($) {
-         alert("comming back soon!");
-         return false;
-       });
     </script>
   </body>
 </html>
