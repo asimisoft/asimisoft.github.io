@@ -3080,3 +3080,12 @@ footer a:visited, footer a:hover {
   width: 100%;
   height: 450px;
 }
+
+.vaccancy-text {background-color: white;}
+.vaccancy-text ul li{
+  color: black;
+}
+.vaccancy-heading {
+  color: #ccc bold;
+  font-size: 26px;
+}
